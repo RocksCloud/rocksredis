@@ -279,13 +279,13 @@ start:Mon Apr 26 16:43:32 CST 2021
 gitee
 
 - [centos7 64bit server](https://gitee.com/RocksCloud/rocksredis_centos7_x86_64)
-- [ubuntu18 64bit destop](https://gitee.com/RocksCloud/rocksredis_ubuntu18_64_destop)
+
 
 
 github
 
 - [centos7 64bit server](https://github.com/RocksCloud/rocksredis_centos7_x86_64)
-- [ubuntu18 64bit destop](https://github.com/RocksCloud/rocksredis_ubuntu18_64_destop)
+
 
 
 其他
