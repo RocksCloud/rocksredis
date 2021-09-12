@@ -21,6 +21,7 @@ rocksredis ,可以支持10万以上个keydb,每个keydb可以存储1亿条以上
 3. 由于资源限制无法部署和应用，例如hadoop、hbase等分布式集群作为数据存储的场景，可以有rocksredis替代
 4. 缓存数据和持久化数据使用交替频繁的场景
 5. 数据量大写入频率高的应用场景
+6. 对比非关系数据库，Tdengine/hbase/kudu/等
 
 
 
@@ -36,15 +37,18 @@ rocksredis ,可以支持10万以上个keydb,每个keydb可以存储1亿条以上
 >
 
 ```
-|--libs
-|--bin
-	|--redis.conf
-	|--runstart.sh
-		
-libs 目录为rocksredis运行依赖库
-bin  目录为rocksredis执行程序
+|--deps
+	|--hiredis
+	|--jemalloc
+	|--linenoise
+	|--lua
+	|--rocksdb
+|--src
+	|--modules
+	|--*c *h
+|--utils
 redis.conf  配置文件
-runstart.sh 执行脚本
+
 ```
 
 > redis.conf  配置说明
@@ -124,7 +128,9 @@ batch_write_background_threadpools 10
 > 运行
 
 ```
-执行运行脚本 ./runstart.sh
+编译：cd src 
+make 
+执行运行脚本 ./src/rocksredis
 6.0.8 为redis的基础版本
 06 为rocksredis的版本
 ```
@@ -274,29 +280,7 @@ start:Mon Apr 26 16:43:32 CST 2021
 
 
 
-##### 六、下载
-
-gitee
-
-- [centos7 64bit server](https://gitee.com/RocksCloud/rocksredis_centos7_x86_64)
-
-
-
-github
-
-- [centos7 64bit server](https://github.com/RocksCloud/rocksredis_centos7_x86_64)
-
-
-
-其他
-
-https://gitee.com/rockscloud
-
-https://github.com/rockscloud
-
-
-
-#### 七、技术交流群
+#### 六、技术交流群
 
 目前，rocksredis 基础评测阶段已完成，目前已经在Rocksiot物联云平台、设备智能管理平台、预测性维护等平台上得到广泛应用，欢迎大家参与技术交流.
 
