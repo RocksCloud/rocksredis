@@ -104,7 +104,7 @@ batch_write_background_threadpools 10
 rocksredis_db_select 15 
 
 #rocksredis 持久化数据库的路径设置
-rocksredis_db_dir  /home/data
+rocksredis_db_dir  data
 
 #rocksredis 批量持久化的batchsize 
 rocks_write_batch_size  2000
@@ -138,6 +138,165 @@ make
 ![运行](https://images.gitee.com/uploads/images/2021/0506/141251_64f8e766_1205442.png "image-20210506113254448.png")
 
 ------
+
+```
+redis.conf中配置数据存储路径
+#rocksredis 持久化数据库的路径设置
+rocksredis_db_dir  data
+
+[root@localhost redis-6.0.8]# tree -d /data/
+/data/
+└── rocksredis
+    ├── custom
+    │   └── DBCUSTOM
+    ├── db0
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db1
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db10
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db11
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db12
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db13
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db14
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db15
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   │   └── db_rockscloud
+    │   │       ├── custom
+    │   │       └── rockscloud
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db2
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db3
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db4
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db5
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db6
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db7
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    ├── db8
+    │   ├── default
+    │   ├── geo
+    │   ├── hash
+    │   ├── list
+    │   ├── set
+    │   ├── stream
+    │   ├── string
+    │   └── zset
+    └── db9
+        ├── default
+        ├── geo
+        ├── hash
+        ├── list
+        ├── set
+        ├── stream
+        ├── string
+        └── zset
+```
 
 
 
