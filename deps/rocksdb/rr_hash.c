@@ -20,7 +20,7 @@ void *RRhsetnxWriteBatchThread(void *arg){
 
     }
 
-    printf("id=%d,key:%s,len=%ld\r\n",wb->id,wb->key,listLength(wb->ld));
+   // printf("id=%d,key:%s,len=%ld\r\n",wb->id,wb->key,listLength(wb->ld));
     listRelease(wb->ld);
     zfree(wb);
 }
